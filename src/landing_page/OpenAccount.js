@@ -2,7 +2,13 @@ import React from 'react';
 
 function OpenAccount() {
   return ( 
-    <h1>Open Account Page</h1>
+    <div className='container mb-5 p-5'>
+      <div className='row text-center'>
+          <h1 className='mt-5'>Open a Zerodha account</h1>
+          <p>Modern plateforms and apps, 0 investments, and 20 intraday and F&O trades</p>
+          <button className=' p-2 btn btn-primary btn-lg col-2 mx-auto mb-5'>Sign up now</button>
+      </div>
+    </div>
    );
 }
 
