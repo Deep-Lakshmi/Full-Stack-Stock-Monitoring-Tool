@@ -1,70 +1,358 @@
-# Getting Started with Create React App
+# Zerodha Clone - Full Stack MERN Trading Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack **Zerodha Clone** application built using the **MERN Stack (MongoDB, Express.js, React.js, Node.js)**.
+This project replicates the experience of Zerodha's main website and Kite trading dashboard with a separate frontend application, trading dashboard, and a common backend API.
 
-## Available Scripts
+The application includes secure user authentication, authorization, cookie-based session management, API integration, and interactive trading charts.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Project Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project consists of three major modules:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+ZERODHA CLONE
+│
+├── frontend
+│   └── Main Zerodha Website Clone
+│
+├── dashboard
+│   └── Kite Trading Dashboard Clone
+│
+└── backend
+    └── Common Backend API for frontend & dashboard
+```
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# ✨ Features
 
-### `npm run build`
+## 🌐 Main Website (Frontend)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Responsive Zerodha landing page
+- Home page
+- About section
+- Product pages
+- Pricing page
+- Support page
+- Signup and Login interface
+- API integration using Axios
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📊 Trading Dashboard (Kite Clone)
 
-### `npm run eject`
+- Trading dashboard UI inspired by Zerodha Kite
+- Watchlist management
+- Holdings section
+- Orders section
+- Positions section
+- Funds section
+- Portfolio view
+- Interactive charts
+- Stock data visualization using Chart.js
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🔐 Authentication & Authorization
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The project includes complete user authentication and authorization.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Features:
 
-## Learn More
+- User Signup
+- User Login
+- Password encryption using bcrypt
+- JWT-based authentication
+- Cookie-based token storage
+- Protected routes
+- User authorization middleware
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Authentication Flow:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+User Signup
+      |
+      ↓
+Password Hashing
+      |
+      ↓
+Store User Data in MongoDB
+      |
+      ↓
+Login Verification
+      |
+      ↓
+Generate JWT Token
+      |
+      ↓
+Store Token in Cookie
+      |
+      ↓
+Access Protected Dashboard
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# 🛠️ Tech Stack
 
-### Analyzing the Bundle Size
+## Frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+- Bootstrap
+- Axios
 
-### Making a Progressive Web App
+## Dashboard
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+- Bootstrap
+- Chart.js
+- React Components
+- Axios
+- API Integration
 
-### Advanced Configuration
+## Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT Authentication
+- Cookie Parser
+- bcrypt.js
 
-### Deployment
+## Database
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- MongoDB
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# 📦 Libraries Used
+
+### Axios
+
+Used for communication between frontend applications and backend APIs.
+
+Example:
+
+```
+React Application
+        |
+        |
+      Axios
+        |
+        ↓
+ Express Backend API
+```
+
+---
+
+### Chart.js
+
+Used for creating interactive and dynamic stock charts inside the trading dashboard.
+
+Features:
+
+- Line charts
+- Market visualization
+- Trading data representation
+
+---
+
+### MongoDB
+
+MongoDB is used as the database for storing:
+
+- User information
+- Authentication data
+- Application-related data
+
+Mongoose is used as an ODM to interact with MongoDB.
+
+---
+
+# 📁 Folder Structure
+
+```
+ZERODHA CLONE
+
+├── frontend
+│   ├── public
+│   ├── src
+│   │   ├── landing_page
+│   │   ├── test
+│   │   ├── index.css
+│   │   └── index.js
+│   ├── .env
+│   ├── .gitignore
+│   ├── package.json
+│   └── package-lock.json
+│
+├── dashboard
+│   ├── public
+│   ├── src
+│   │   ├── components
+│   │   ├── data
+│   │   ├── index.css
+│   │   └── index.js
+│   ├── .env
+│   ├── .gitignore
+│   ├── package.json
+│   └── package-lock.json
+│
+└── backend
+    ├── controllers
+    ├── Middlewares
+    ├── model
+    ├── Routes
+    ├── schemas
+    ├── util
+    ├── index.js
+    ├── .env
+    ├── .gitignore
+    ├── package.json
+    └── package-lock.json
+---
+
+# ⚙️ Installation & Setup
+
+## Clone Repository
+
+```bash
+git clone <repository-url>
+```
+
+---
+
+## Install Dependencies
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+```
+
+### Dashboard
+
+```bash
+cd dashboard
+npm install
+```
+
+### Backend
+
+```bash
+cd backend
+npm install
+```
+
+---
+
+# 🔑 Environment Variables
+
+Create `.env` file inside backend:
+
+```
+MONGO_URI=your_mongodb_connection_string
+
+JWT_SECRET=your_secret_key
+
+PORT=your_port_number
+```
+
+Create required environment variables according to your configuration.
+
+---
+
+# ▶️ Running the Project
+
+Run backend:
+
+```bash
+cd backend
+npm start
+```
+
+Run frontend:
+
+```bash
+cd frontend
+npm start
+```
+
+Run dashboard:
+
+```bash
+cd dashboard
+npm start
+```
+
+---
+
+# 🔄 Application Architecture
+
+```
+Frontend (Zerodha Website)
+              |
+              |
+              ↓
+        Backend API
+              |
+              |
+              ↓
+          MongoDB
+
+
+Dashboard (Kite Clone)
+              |
+              |
+              ↓
+        Backend API
+```
+
+---
+
+# 🔒 Security Features
+
+- Password hashing using bcrypt
+- JWT authentication
+- Cookie-based token storage
+- Protected routes
+- Authorization middleware
+- Secure API communication
+
+---
+
+### Environment Configuration
+
+- `.env` files are used to store sensitive information like database URLs, JWT secrets, and API configurations.
+- `.gitignore` is used to prevent sensitive files and unnecessary folders like `node_modules` from being pushed to GitHub.
+
+# 🚀 Future Enhancements
+
+- Real-time stock price updates
+- Payment gateway integration
+- Advanced portfolio analytics
+- Live market data API integration
+- Order execution simulation
+- More trading indicators
+
+---
+
+# 👩‍💻 Author
+
+**Deep Lakshmi Kumari**
+
+Full Stack Developer | MERN Stack Developer
+
+---
+
+## ⭐ If you like this project, consider giving it a star!

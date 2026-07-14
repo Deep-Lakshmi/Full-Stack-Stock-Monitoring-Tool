@@ -27,9 +27,9 @@ mongoose
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: ["http://localhost:3000", "http://localhost:3001"],
     credentials: true,
-  })
+  }),
 );
 
 app.use(express.json());
@@ -203,22 +203,22 @@ app.use("/", authRoute);
 //   res.send("Positions added successfully");
 // });
 
-app.get("/allHoldings", async(req, res) => {
+app.get("/allHoldings", async (req, res) => {
   let allHoldings = await HoldingsModel.find({});
   res.json(allHoldings);
 });
 
-app.get("/allPositions", async(req, res) => {
+app.get("/allPositions", async (req, res) => {
   let allPositions = await PositionsModel.find({});
   res.json(allPositions);
 });
 
-app.post('/newOrder', async (req, res) => {
+app.post("/newOrder", async (req, res) => {
   let newOrder = new OrdersModel({
     name: req.body.name,
     qty: req.body.qty,
     price: req.body.price,
-    mode: req.body.mode
+    mode: req.body.mode,
   });
 
   newOrder.save();
