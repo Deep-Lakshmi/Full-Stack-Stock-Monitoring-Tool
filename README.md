@@ -180,7 +180,7 @@ Mongoose is used as an ODM to interact with MongoDB.
 
 # 📁 Folder Structure
 
-```
+````
 ZERODHA CLONE
 
 ├── frontend
@@ -208,17 +208,22 @@ ZERODHA CLONE
 │   └── package-lock.json
 │
 └── backend
-    ├── controllers
-    ├── Middlewares
-    ├── model
-    ├── Routes
-    ├── schemas
-    ├── util
-    ├── index.js
-    ├── .env
-    ├── .gitignore
-    ├── package.json
-    └── package-lock.json
+|    ├── controllers
+|    ├── Middlewares
+|    ├── model
+|    ├── Routes
+|    ├── schemas
+|    ├── util
+|    ├── index.js
+|    ├── .env
+|    ├── .gitignore
+|    ├── package.json
+|    └── package-lock.json
+├── .gitignore
+├── package.json
+├── package-lock.json
+└── README.md
+
 ---
 
 # ⚙️ Installation & Setup
@@ -227,7 +232,7 @@ ZERODHA CLONE
 
 ```bash
 git clone <repository-url>
-```
+````
 
 ---
 
